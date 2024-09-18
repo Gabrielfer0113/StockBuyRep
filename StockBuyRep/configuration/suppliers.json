@@ -1,0 +1,215 @@
+{
+    "Arcelormittal": {
+        "Normas": {
+            "Bitolas": [
+                "Sextavado",
+                "Redondo"
+            ],
+            "Normas": [
+                "SAE1020",
+                "SAE1045",
+                "11SMN30",
+                "11SMN37"
+            ],
+            "Fabricacao": [
+                "Laminado",
+                "Trefilado"
+            ]
+        },
+        "Frete": {
+            "Entrega": true,
+            "Kg_minimo": "200",
+            "Valor_minimo": "0",
+            "Kg_minimo_por_item": "50",
+            "Taxa": "100"
+        },
+        "Nome_vendedor": "Cerli Faria Alves",
+        "email": "cerlialves77@outlook.com"
+    },
+    "AcoVisa": {
+        "Normas": {
+            "Bitolas": [
+                "REDONDO",
+                "SEXTAVADO",
+                "QUADRADO",
+                "BARRA CHATA",
+                "CHAPA",
+                "CANTONEIRA"
+            ],
+            "Normas": [
+                "SAE 1020",
+                "SAE 1045",
+                "SAE 4140",
+                "SAE 4340",
+                "SAE 8620",
+                "DIN 304",
+                "VC 131",
+                "AISIO1 (VND)",
+                "H13"
+            ],
+            "Fabricacao": [
+                "Laminado",
+                "Trefilado",
+                "Retificado"
+            ]
+        },
+        "Frete": {
+            "Entrega": true,
+            "Kg_minimo": 200,
+            "Valor_minimo": 500,
+            "Kg_minimo_por_item": 50,
+            "Taxa": 100
+        },
+        "Nome_vendedor": "Rosana Auricchio",
+        "email": "rosana@acovisa.com.br"
+    },
+    "AcoTubo": {
+        "Normas": {
+            "Bitolas": [],
+            "Normas": []
+        },
+        "Frete": {
+            "Entrega": false,
+            "Kg_minimo": 0,
+            "Valor_minimo": 0,
+            "Kg_minimo_por_item": 0,
+            "Taxa": 0
+        },
+        "Nome_vendedor": "",
+        "email": ""
+    },
+    "Mercurio": {
+        "Normas": {
+            "Bitolas": [],
+            "Normas": []
+        },
+        "Frete": {
+            "Entrega": false,
+            "Kg_minimo": 0,
+            "Valor_minimo": 0,
+            "Kg_minimo_por_item": 0,
+            "Taxa": 0
+        },
+        "Nome_vendedor": "",
+        "email": ""
+    },
+    "Trefita": {
+        "Normas": {
+            "Bitolas": [],
+            "Normas": [],
+            "Fabricacao": []
+        },
+        "Frete": {
+            "Entrega": true,
+            "Kg_minimo": 200,
+            "Valor_minimo": 500,
+            "Kg_minimo_por_item": 0,
+            "Taxa": 100
+        },
+        "Nome_vendedor": "",
+        "email": ""
+    },
+    "Favorit": {
+        "Normas": {
+            "Bitolas": [],
+            "Normas": []
+        },
+        "Frete": {
+            "Entrega": true,
+            "Valor_minimo": 7500
+        },
+        "Nome_vendedor": "",
+        "email": ""
+    },
+    "Pasifer": {
+        "Normas": {
+            "Bitolas": [
+                "REDONDO",
+                "SEXTAVADO",
+                "QUADRADO",
+                "BARRA CHATA",
+                "CHAPA",
+                "CANTONEIRA"
+            ],
+            "Normas": [
+                "SAE 1020",
+                "SAE 1045",
+                "SAE 4140",
+                "SAE 4340",
+                "SAE 8620",
+                "DIN 304",
+                "VC 131",
+                "AISIO1 (VND)",
+                "H13",
+                "6351T6"
+            ],
+            "Fabricacao": [
+                "Laminado",
+                "Trefilado",
+                "Retificado"
+            ]
+        },
+        "Frete": {
+            "Entrega": true,
+            "Kg_minimo": 0,
+            "Valor_minimo": 2000,
+            "Kg_minimo_por_item": 0,
+            "Taxa": 0
+        },
+        "Nome_vendedor": "Thalita Correia",
+        "email": "vendas6@pasifer.com.br"
+    },
+    "Puma": {
+        "Normas": {
+            "Bitolas": [
+                "REDONDO",
+                "SEXTAVADO",
+                "QUADRADO"
+            ],
+            "Normas": [
+                "DIN 304",
+                "DIN 304L",
+                "DIN 316",
+                "DIN 316L",
+                "CA 360"
+            ],
+            "Fabricacao": [
+                "Trefilado"
+            ]
+        },
+        "Frete": {
+            "Entrega": true,
+            "Kg_minimo": 250,
+            "Valor_minimo": 2000,
+            "Kg_minimo_por_item": 0,
+            "Taxa": 0
+        }
+    },
+    "Tesla": {
+        "Normas": {
+            "Bitolas": [
+                "REDONDO",
+                "QUADRADO",
+                "BLOCO",
+                "CHAPA"
+            ],
+            "Normas": [
+                "CA 360",
+                "CA 377",
+                "6351 T6"
+            ],
+            "Fabricacao": [
+                "Trefilado"
+            ]
+        },
+        "Frete": {
+            "Entrega": true,
+            "Kg_minimo": 100,
+            "Valor_minimo": 0,
+            "Kg_minimo_por_item": 0,
+            "Taxa": 0
+        },
+        "Nome_vendedor": "Maiara Pacheco",
+        "email": "maiara@teslametais.com.br"
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "Bitola": {
+        "S": "SEXTAVADO",
+        "R": "REDONDO",
+        "Q": "QUADRADO",
+        "JL": "JOELHO 90\u00b0",
+        "TL": "TEE",
+        "K": "FORJADO 45\u00b0",
+        "CZ": "CRUZETA",
+        "A": "ANEL",
+        "TN": "TUBO SEM COSTURA",
+        "TC": "TUBO COM COSTURA",
+        "TB": "TUBO MECÂNICO",
+        "TNR": "TUBO COM COSTURA REMOVIDA",
+        "CH": "CHAPA",
+        "BC": "BARRA CHATA",
+        "JC": "JOELHO LONGO 90\u00b0",
+        "JM": "JOELHO ORIENT\u00c1VEL",
+        "FLANGE": "FLANGE"
+    },
+    "Material": {
+        "A": "A\u00c7O",
+        "B": "COBRE",
+        "C": "LAT\u00c3O",
+        "D": "BRONZE GRAFITADO",
+        "F": "FERRO FUNDIDO",
+        "I": "INOX",
+        "L": "ALUM\u00cdNIO",
+        "M": "POLIACETAL",
+        "N": "NYLON",
+        "O": "OXICORTE",
+        "P": "ACR\u00cdLICO",
+        "T": "TEFLON"
+    },
+    "Norma": {
+        "A": "DIN 11SMN37",
+        "B": "DIN 12L14",
+        "C": "DIN 11SMN30",
+        "D": "SAE 1045",
+        "E": "ASTM A182f11",
+        "F": "DIN 316",
+        "FL": "DIN 316L",
+        "G": "SAE 1020",
+        "H": "CA 377",
+        "I": "SAE 1010",
+        "J": "CA 360",
+        "K": "SAE 841",
+        "L": "DIN 304",
+        "LL": "DIN 304L",
+        "M": "ASTM 564",
+        "N": "ASTM 630",
+        "O": "ASTM 17-4PH",
+        "P": "SAE 1215",
+        "Q": "6351 T6",
+        "R": "SAE 4140",
+        "S": "C 110 ELETROL\u00cdTICO",
+        "T": "H13",
+        "U": "SAE 5160",
+        "V": "NAVAL",
+        "W": "DIN 20MNCR5",
+        "X": "DIN ST52.3",
+        "Y": "NYLON 6.0",
+        "Z": "ASTM A36",
+        "AA": "SAE 8640",
+        "AB": "LNE 380",
+        "AC": "SAE 8620",
+        "AD": "VW3",
+        "AE": "TM23",
+        "AF": "PTFE",
+        "AG": "POLIACETAL",
+        "AH": "VC 131",
+        "AI": "ASTM A182 F22",
+        "AJ": "DIN 310",
+        "AK": "FC 300",
+        "AL": "NBR 5590",
+        "AM": "AISIO1 (VND)",
+        "AN": "FERRO FUNDIDO NODULAR"
+    },
+    "Fabricacao": [
+        "RETIFICADO",
+        "LAMINADO",
+        "TREFILADO",
+        "FORJADO",
+        "DESCASCADO",
+        "EXTRUSADO"
+    ],
+    "Peso_forjados": {
+        "JL": {
+            "2-14": 0.129,
+            "2": 0.129,
+            "3": 0.255,
+            "4": 0.407,
+            "5": 0.61,
+            "6": 0.97,
+            "6-FLANGE": 1.18,
+            "7": 1.92
+        },
+        "JC": {
+            "5": 0.895
+        },
+        "TL": {
+            "2": 0.233,
+            "3": 0.452,
+            "5": 0.952,
+            "CH36": 1.45
+        },
+        "K": {},
+        "CZ": {
+            "4": 0.615,
+            "6": 2.08
+        },
+        "Outros": {
+            "OCD 12FL34": 1.6
+        }
+    }
+}
