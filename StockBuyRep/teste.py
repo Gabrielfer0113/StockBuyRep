@@ -117,6 +117,8 @@ def inch_to_meters(*args):
         elif item == '"' or item == "'":
             res = round(25.4 * float(args[0]), 2)
             return f'{res}mm'
+        else:
+            print('teste do elif')
 
 
 def bitola(tipo):
@@ -139,10 +141,11 @@ def fabricacao(tipo):
 
 def weight_mesure(mesure):
     weight = Material.get(f'{mat}')
-    mm = ' '.join(medida[1])
-    mm = [num for num in mm if num in '0123456789'] 
+    part = ' '.join(medida[1])
+    part = part.split()
+    print(part)
+    mm = [num for num in part if num in '0123456789'] 
     mm = float(mm[0] + mm[1] + mm[2])
-    print(mm)
     mm /= 100
     if Bitola.get(bit) == 'REDONDO':
         return f'{round(pi * pow(mm / 2, 2) * mesure * weight[1]/ 10, 2)}Kg', f'{mesure * 1000}mm'
@@ -150,7 +153,7 @@ def weight_mesure(mesure):
         return f'{round((pow(mm) * mesure * weight[1])/10, 3)}Kg', f'{mesure * 1000}mm'
     elif Bitola.get(bit) == 'SEXTAVADO':
         return f'{round((((3 * sqrt(3) / 2 * ((mm / sqrt(3))**2)) * mesure) * weight[1])/ 10, 3)}Kg', f'{mesure * 1000}mm'
-    elif Bitola.get(bit) == 'TUBO SEM COSTURA' or 'TUBO COM COSTURA' or 'TUBO MECÂNICO' or 'TUBO COM COSTURA REMOVIDA':
+    elif Bitola.get(bit) == 'TUBO SEM COSTURA' or Bitola.get(bit) == 'TUBO COM COSTURA' or Bitola.get(bit) == 'TUBO MECÂNICO' or Bitola.get(bit) ==  'TUBO COM COSTURA REMOVIDA':
         diam_inter = float(input(f'Digite o diametro interno do {Bitola.get(bit)}: '))
         diam_exter = float(input(f'Digite o dimetro externo do {Bitola.get(bit)}: '))
         parametros.append(f'Diametro interno: {diam_inter}mm -- Diametro externo: {diam_exter}mm')
@@ -170,7 +173,7 @@ parametros.append(f'{norma(tipo= input("Norma: ").upper())} ')
 parametros.append(f'{fabricacao(tipo= input('Fabricação: ').upper())} ')
 
 inch_or_cm = []
-inch = input(f'Digite o diametro do/a {Bitola.get(bit)}: (ex: 3-3/4 ou 3" ou 56mm')
+inch = input(f'Digite o diametro do/a {Bitola.get(bit)}: (ex: 3-3/4 ou 3" ou 56mm) ')
 inch_or_cm.extend(inch)
 for item in inch_or_cm:
     if item == 'm':
@@ -188,6 +191,11 @@ for item in inch_or_cm:
         medida.append(inch_to_meters(*number))
     elif item == 'm':
         medida = [inch]
+        value = ' '.join(inch).split()
+        number = [float(item) for item in value if item in '0123456789']
+        print(number)
+        medida.append(inch_to_meters(*number))
+        print(medida)
         
 parametros.append(medida[:])
 parametros.append(f'{weight_mesure(mesure= float(input('Tamanho: ')))}')
