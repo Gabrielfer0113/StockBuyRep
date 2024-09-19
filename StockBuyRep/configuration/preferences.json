@@ -1,0 +1,47 @@
+{
+    "Beatriz": {
+        "Theme": "DarkGrey7",
+        "button_color": "#4c4c61",
+        "pressed_button_color": "lightblue",
+        "second_color": "Lightslategray",
+        "text_color": "black",
+        "font": "Arial",
+        "font_size": 10.0
+    },
+    "Gessica": {
+        "Theme": "DarkBlue3",
+        "button_color": "#4d4d94",
+        "pressed_button_color": "lightblue",
+        "second_color": "Lightslategray",
+        "text_color": "white",
+        "font": "{Times New Roman}",
+        "font_size": 6.0
+    },
+    "Leonardo": {
+        "Theme": "DarkBlue3",
+        "button_color": "#4d4d94",
+        "pressed_button_color": "lightblue",
+        "second_color": "Lightslategray",
+        "text_color": "white",
+        "font": null,
+        "font_size": null
+    },
+    "Mauro": {
+        "Theme": "DarkBlue3",
+        "button_color": "#4d4d94",
+        "pressed_button_color": "lightblue",
+        "second_color": "Lightslategray",
+        "text_color": "white",
+        "font": null,
+        "font_size": null
+    },
+    "Marcio": {
+        "Theme": "DarkBlue3",
+        "button_color": "#4d4d94",
+        "pressed_button_color": "lightblue",
+        "second_color": "Lightslategray",
+        "text_color": "white",
+        "font": null,
+        "font_size": null
+    }
+}

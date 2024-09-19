@@ -1,0 +1,37 @@
+{
+    "preferences": {
+        "Theme": "",
+        "button_color": "",
+        "pressed_button_color": "",
+        "second_color": "",
+        "text_color": "",
+        "font": "",
+        "font_size": ""
+    },
+    "report": {
+        "bitola": [],
+        "material": [],
+        "norma": [],
+        "dimensao": [],
+        "milimetros": [],
+        "fabricacao": [],
+        "urgente": [],
+        "atrasado": [],
+        "quilos": [],
+        "index": []
+    },
+    "historic": {
+        "index": [],
+        "fornecedor": [],
+        "ordem_compra": [],
+        "material": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "valor": [],
+        "quilos": [],
+        "nota_recebimento": []
+    }
+}
