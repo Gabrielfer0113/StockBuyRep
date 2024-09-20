@@ -31,48 +31,48 @@ Material= dict(
         T= ("TEFLON", 2.2)
 )
 Norma= dict(
-        A= "DIN 11SMN37",
-        B= "DIN 12L14",
-        C= "DIN 11SMN30",
-        D= "SAE 1045",
-        E= "ASTM A182f11",
-        F= "DIN 316",
-        G= "SAE 1020",
-        H= "CA 377",
-        I= "SAE 1010",
-        J= "CA 360",
-        K= "SAE 841",
-        L= "DIN 304",
-        M= "ASTM 564",
-        N= "ASTM 630",
-        O= "ASTM 17-4PH",
-        P= "SAE 1215",
-        Q= "6351 T6",
-        R= "SAE 4140",
-        S= "C 110 ELETROL\u00cdTICO",
-        T= "H13",
-        U= "SAE 5160",
-        V= "NAVAL",
-        W= "DIN 20MNCR5",
-        X= "DIN ST52.3",
-        Y= "NYLON 6.0",
-        Z= "ASTM A36",
-        AA= "SAE 8640",
-        AB= "LNE 380",
-        AC= "SAE 8620",
-        AD= "VW3",
-        AE= "TM23",
-        AF= "PTFE",
-        AG= "POLIACETAL",
-        AH= "VC 131",
-        AI= "ASTM A182 F22",
-        AJ= "DIN 310",
-        AK= "FC 300",
-        AL= "NBR 5590",
-        AM= "AISIO1 (VND)",
-        AN= "FERRO FUNDIDO NODULAR",
-        LL= "DIN 304L",
-        FL= "DIN 316L"
+        A= ("DIN 11SMN37", )
+        B= ("DIN 12L14", )
+        C= ("DIN 11SMN30", )
+        D= ("SAE 1045", )
+        E= ("ASTM A182f11", )
+        F= ("DIN 316", )
+        G= ("SAE 1020", )
+        H= ("CA 377", )
+        I= ("SAE 1010", )
+        J= ("CA 360", )
+        K= ("SAE 841", )
+        L= ("DIN 304", )
+        M= ("ASTM 564", )
+        N= ("ASTM 630", )
+        O= ("ASTM 17-4PH",)
+        P= ("SAE 1215",)
+        Q= ("6351 T6",)
+        R= ("SAE 4140",)
+        S= ("C 110 ELETROL\u00cdTICO",)
+        T= ("H13",)
+        U= ("SAE 5160",)
+        V= ("NAVAL",)
+        W= ("DIN 20MNCR5",)
+        X= ("DIN ST52.3",)
+        Y= ("NYLON 6.0",)
+        Z= ("ASTM A36",)
+        AA= ("SAE 8640",)
+        AB= ("LNE 380",)
+        AC= ("SAE 8620",)
+        AD= ("VW3",)
+        AE= ("TM23",)
+        AF= ("PTFE",)
+        AG= ("POLIACETAL",)
+        AH= ("VC 131",)
+        AI= ("ASTM A182 F22",)
+        AJ= ("DIN 310",)
+        AK= ("FC 300",)
+        AL= ("NBR 5590",)
+        AM= ("AISIO1 (VND)",)
+        AN= ("FERRO FUNDIDO NODULAR",)
+        LL= ("DIN 304L",)
+        FL= ("DIN 316L")
 )
 Fabricacao= [
     "RETIFICADO",
@@ -93,11 +93,14 @@ from math import pi
 def merge(*args):
     try:
         if len(args) == 1:
-             value = args[0]
-             return value
+            value = args[0]
+            return value
         elif len(args) == 2:
-             value = args[0] + args[1]
-             return value
+            value = args[0] + args[1]
+            return value
+        elif len(args) == 3:
+            value = args[0] + args[1] + args[2]
+            return value
     except ValueError as err:
         print(f'Informe um valor valido. O erro que foi feito é {err}')
 
@@ -118,8 +121,9 @@ def inch_to_meters(*args):
             res = round(25.4 * float(args[0]), 2)
             return f'{res}mm'
         else:
-            print('teste do elif')
-
+            if item == 'm':
+                return f'O valor ja esta em milimetros.'
+                
 
 def bitola(tipo):
     return Bitola.get(f'{tipo}', "Bitola não encontrada.")
@@ -139,7 +143,7 @@ def fabricacao(tipo):
     return 'Fabricação não encontrada.'
 
 
-def weight_mesure(mesure):
+def inch_weight_mesure(mesure):
     weight = Material.get(f'{mat}')
     part = ' '.join(medida[1])
     part = part.split()
@@ -164,6 +168,33 @@ def weight_mesure(mesure):
         else:
             return f'{round(diam_inter - diam_exter)}Kg', f'{mesure * 1000}mm'
 
+
+def milimeters_weight_mesure(mesure):
+    weight = Material.get(f'{mat}')
+    Material.get(f'{mat}')
+    part = ' '.join(medida[0])
+    part = part.split()
+    mm = [num for num in part if num in '0123456789']
+    num = float(merge(*mm))
+    if Bitola.get(bit) == 'REDONDO':
+        return f'{round(pi * pow(num / 2, 2) * mesure * weight[1]/ 1000, 2)}Kg', f'{mesure * 1000}mm'
+    elif Bitola.get(bit) == 'QUADRADO':
+        return f'{round((pow(num) * mesure * weight[1])/1000, 3)}Kg', f'{mesure * 1000}mm'
+    elif Bitola.get(bit) == 'SEXTAVADO':
+        return f'{round((((3 * sqrt(3) / 2 * ((mm / sqrt(3))**2)) * mesure) * weight[1])/ 1000, 3)}Kg', f'{mesure * 1000}mm'
+    elif Bitola.get(bit) == 'TUBO SEM COSTURA' or Bitola.get(bit) == 'TUBO COM COSTURA' or Bitola.get(bit) == 'TUBO MECÂNICO' or Bitola.get(bit) ==  'TUBO COM COSTURA REMOVIDA':
+        diam_inter = float(input(f'Digite o diametro interno do {Bitola.get(bit)}: '))
+        diam_exter = float(input(f'Digite o dimetro externo do {Bitola.get(bit)}: '))
+        parametros.append(f'Diametro interno: {diam_inter}mm -- Diametro externo: {diam_exter}mm')
+        diam_inter = pi * pow(diam_inter / 2, 2) * mesure * weight[1]/ 1000
+        diam_inter = pi * pow(diam_exter / 2, 2) * mesure * weight[1]/ 1000
+        if diam_exter > diam_inter:
+            return f'{round(diam_exter - diam_inter)}Kg', f'{mesure * 1000}mm' 
+        else:
+            return f'{round(diam_inter - diam_exter)}Kg', f'{mesure * 1000}mm'
+
+
+
 parametros = []
 bit = input('Bitola: ').upper()
 parametros.append(f'{bitola(tipo= bit)}')
@@ -178,27 +209,30 @@ inch_or_cm.extend(inch)
 for item in inch_or_cm:
     if item == 'm':
         inch_or_cm.pop()
-    if item == '"' or item == "'":
+    if item == '"' or item == "'": # <- Polegada inteira
         medida = [inch]
         value = [num for num in inch if num in '0123456789']
         number = []
         number.append((merge(*value)))
-        medida.append(inch_to_meters(*number)) 
-    elif item == '/' or item == '-':
+        medida.append(inch_to_meters(*number))
+        parametros.append(f'{inch_weight_mesure(mesure= float(input('Tamanho: ')))}')
+        parametros.append(medida[:])
+    elif item == '/' or item == '-': # <- Polegada fracionaria
         medida = [inch]
         value = ' '.join(inch).split()
         number = [float(item) for item in value if item in '0123456789']
         medida.append(inch_to_meters(*number))
-    elif item == 'm':
+        parametros.append(f'{inch_weight_mesure(mesure= float(input('Tamanho: ')))}')
+        parametros.append(medida[:])
+    elif item == 'm': # <- Milimetros
         medida = [inch]
         value = ' '.join(inch).split()
         number = [float(item) for item in value if item in '0123456789']
-        print(number)
         medida.append(inch_to_meters(*number))
-        print(medida)
-        
-parametros.append(medida[:])
-parametros.append(f'{weight_mesure(mesure= float(input('Tamanho: ')))}')
+        parametros.append(f'{milimeters_weight_mesure(mesure= float(input('Tamanho: ')))}')
+        parametros.append(medida[:])
+
+
 
 print(parametros)
 
