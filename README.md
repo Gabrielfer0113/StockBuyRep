@@ -1,6 +1,6 @@
-** -- English -- **
+#-- English --
 
-# StockBuyRep
+## StockBuyRep
 
 **StockBuyRep** is a Python program that provides a complete *inventory management and reporting system*. It consists of two distinct areas: the requester area and the buyer area.
 
